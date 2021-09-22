@@ -1,15 +1,15 @@
 const a = "123"
 let b = '123'
 
-b = 456
+b = '456'
 
 // a = 456 -> Ilegal
 
 console.log(a)
 console.log(b)
 
-verdadero = true
-falso = false
+const verdadero = true
+const falso = false
 
 // Object literal
 const pato = {

@@ -9,7 +9,18 @@
 // No se olviden de agregar una prueba unitaria que compruebe la consigna que inventaron
 // Las pruebas estan en: ./__tests__/objetos.test.js
 function unObjeto() {
-  
+  const Objeto = {
+      id: 1,
+      nombre: "Object",
+      apellido: "New",
+      hobbie: "exist",
+      rangos: [1,2,3],
+      borrado : false,
+      porDefinir: null
+      
+
+  }
+  return Objeto;
 }
 
 module.exports = unObjeto

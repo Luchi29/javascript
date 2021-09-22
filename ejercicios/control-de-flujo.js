@@ -49,7 +49,20 @@ const edificios = [
 //    Algun edificio, Calle Falsa 123
 //    Otro edificio, Calle Falsa 321
 function leerEdificios() {
-  
+  return edificios.sort((a,b) => {
+    const nombreA = a.nombre.toUpperCase();
+    const nombreB = b.nombre.toUpperCase();
+    if(nombreA > nombreB) return 1;
+    if(nombreA < nombreB) return -1;
+    return 0;
+
+  })
+  .filter(e => e.edad%2 === 0)
+  .filter(e => e.pisos >= 10)
+  .map(e => `${e.nombre}, ${e.direccion}`)
+  .reduce((prev, e) => `${prev}${e}\n`, '')
+
+
 }
 
 module.exports = leerEdificios
